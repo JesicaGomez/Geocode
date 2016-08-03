@@ -15,6 +15,8 @@
   <%= @person.direccion %>
 </p>
 
+<%=image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@person.latitude},#{@person.longitude}&zoom=17&size=600x300&maptype=roadmap%20&markers=color:blue%7Clabel:S%7C#{@person.latitude},#{@person.longitude}&key= AIzaSyC8gE6YY7K3qpQhEW5rfAs89I0F6VVWqBM"%>
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
+
+<%= link_to 'Edit', edit_person_path(@person) %> 
 <%= link_to 'Back', people_path %>
